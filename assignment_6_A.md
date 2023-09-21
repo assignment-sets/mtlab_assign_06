@@ -1,29 +1,27 @@
-# mtlab_assign_06_A
+clc %clearing the cmd window
 
-clc
+%loading data from matlab to fill up tables
 load patients
 whos -file patients
 
-
+%creating two tables
 T1 = table(Age, SelfAssessedHealthStatus, Smoker);
 T2 = table(Height, Weight, Systolic, Diastolic);
 
-%first five rows display
+%printing the tables
 head(T1, 5)
 head(T2, 5)
 
-%concatenation of tables
-T = [T1, T2]
-head(T1, 5)
-head(T2, 5)
+%concatenating two tables
+T = [T1, T2];
+head(T, 5)
 
-%adding vars in workspace in table
-T = addvars(T.LastName.'Before' : 'Age');
-T.Lastname = string(T.Lastname);
-head(t, 5)
+%adding new col to the merged table
+T = addvars(T, LastName, 'Before', 'Age');
+T.LastName = string(T.LastName);
+head(T, 5)
 
-% add vars using dot syntax
+%adding col without using addvars
 T.BloodPressure = [Systolic Diastolic];
-head(t,5)
+head(T, 5)
 
-fuck off
