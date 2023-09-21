@@ -25,3 +25,18 @@ head(T, 5)
 T.BloodPressure = [Systolic Diastolic];
 head(T, 5)
 
+%reordering the columns by specifying index in the desired order
+T = T(:, [1:7 9 8]);
+head(T, 5);
+
+%remove or delete vars or cols from table
+T = removevars(T, 'Smoker');
+head(T, 5);
+
+%split and merge table variables
+T = splitvars(T, 'BloodPressure', 'NewVariableNames',["sys", "dia"]);
+head(T, 5);
+
+%converting rows to vars
+T3 = rows2vars(T, 'VariableNamesSource', "LastName");
+T3(:, 1:5)
