@@ -1,0 +1,101 @@
+  Name                            Size            Bytes  Class      Attributes
+
+  Age                           100x1               800  double               
+  Diastolic                     100x1               800  double               
+  Gender                        100x1             11412  cell                 
+  Height                        100x1               800  double               
+  LastName                      100x1             11616  cell                 
+  Location                      100x1             14208  cell                 
+  SelfAssessedHealthStatus      100x1             11540  cell                 
+  Smoker                        100x1               100  logical              
+  Systolic                      100x1               800  double               
+  Weight                        100x1               800  double               
+
+    Age    SelfAssessedHealthStatus    Smoker
+    ___    ________________________    ______
+
+    38          {'Excellent'}          true  
+    43          {'Fair'     }          false 
+    38          {'Good'     }          false 
+    40          {'Fair'     }          false 
+    49          {'Good'     }          false 
+
+    Height    Weight    Systolic    Diastolic
+    ______    ______    ________    _________
+
+      71       176        124          93    
+      69       163        109          77    
+      64       131        125          83    
+      67       133        117          75    
+      64       119        122          80    
+
+    Age    SelfAssessedHealthStatus    Smoker    Height    Weight    Systolic    Diastolic
+    ___    ________________________    ______    ______    ______    ________    _________
+
+    38          {'Excellent'}          true        71       176        124          93    
+    43          {'Fair'     }          false       69       163        109          77    
+    38          {'Good'     }          false       64       131        125          83    
+    40          {'Fair'     }          false       67       133        117          75    
+    49          {'Good'     }          false       64       119        122          80    
+
+     LastName     Age    SelfAssessedHealthStatus    Smoker    Height    Weight    Systolic    Diastolic
+    __________    ___    ________________________    ______    ______    ______    ________    _________
+
+    "Smith"       38          {'Excellent'}          true        71       176        124          93    
+    "Johnson"     43          {'Fair'     }          false       69       163        109          77    
+    "Williams"    38          {'Good'     }          false       64       131        125          83    
+    "Jones"       40          {'Fair'     }          false       67       133        117          75    
+    "Brown"       49          {'Good'     }          false       64       119        122          80    
+
+     LastName     Age    SelfAssessedHealthStatus    Smoker    Height    Weight    Systolic    Diastolic    BloodPressure
+    __________    ___    ________________________    ______    ______    ______    ________    _________    _____________
+
+    "Smith"       38          {'Excellent'}          true        71       176        124          93         124     93  
+    "Johnson"     43          {'Fair'     }          false       69       163        109          77         109     77  
+    "Williams"    38          {'Good'     }          false       64       131        125          83         125     83  
+    "Jones"       40          {'Fair'     }          false       67       133        117          75         117     75  
+    "Brown"       49          {'Good'     }          false       64       119        122          80         122     80  
+
+     LastName     Age    SelfAssessedHealthStatus    Smoker    Height    Weight    Systolic    BloodPressure    Diastolic
+    __________    ___    ________________________    ______    ______    ______    ________    _____________    _________
+
+    "Smith"       38          {'Excellent'}          true        71       176        124        124     93         93    
+    "Johnson"     43          {'Fair'     }          false       69       163        109        109     77         77    
+    "Williams"    38          {'Good'     }          false       64       131        125        125     83         83    
+    "Jones"       40          {'Fair'     }          false       67       133        117        117     75         75    
+    "Brown"       49          {'Good'     }          false       64       119        122        122     80         80    
+
+     LastName     Age    SelfAssessedHealthStatus    Height    Weight    Systolic    BloodPressure    Diastolic
+    __________    ___    ________________________    ______    ______    ________    _____________    _________
+
+    "Smith"       38          {'Excellent'}            71       176        124        124     93         93    
+    "Johnson"     43          {'Fair'     }            69       163        109        109     77         77    
+    "Williams"    38          {'Good'     }            64       131        125        125     83         83    
+    "Jones"       40          {'Fair'     }            67       133        117        117     75         75    
+    "Brown"       49          {'Good'     }            64       119        122        122     80         80    
+
+     LastName     Age    SelfAssessedHealthStatus    Height    Weight    Systolic    sys    dia    Diastolic
+    __________    ___    ________________________    ______    ______    ________    ___    ___    _________
+
+    "Smith"       38          {'Excellent'}            71       176        124       124    93        93    
+    "Johnson"     43          {'Fair'     }            69       163        109       109    77        77    
+    "Williams"    38          {'Good'     }            64       131        125       125    83        83    
+    "Jones"       40          {'Fair'     }            67       133        117       117    75        75    
+    "Brown"       49          {'Good'     }            64       119        122       122    80        80    
+
+
+ans =
+
+  8×5 table
+
+       OriginalVariableNames            Smith        Johnson     Williams     Jones  
+    ____________________________    _____________    ________    ________    ________
+
+    {'Age'                     }    {[       38]}    {[  43]}    {[  38]}    {[  40]}
+    {'SelfAssessedHealthStatus'}    {'Excellent'}    {'Fair'}    {'Good'}    {'Fair'}
+    {'Height'                  }    {[       71]}    {[  69]}    {[  64]}    {[  67]}
+    {'Weight'                  }    {[      176]}    {[ 163]}    {[ 131]}    {[ 133]}
+    {'Systolic'                }    {[      124]}    {[ 109]}    {[ 125]}    {[ 117]}
+    {'sys'                     }    {[      124]}    {[ 109]}    {[ 125]}    {[ 117]}
+    {'dia'                     }    {[       93]}    {[  77]}    {[  83]}    {[  75]}
+    {'Diastolic'               }    {[       93]}    {[  77]}    {[  83]}    {[  75]}
