@@ -1,0 +1,32 @@
+load myFile.mat
+
+%creating two tables
+T1 = table(S1, PPName, Age);
+head(T1, 2);
+T2 = table(Smoker, Height, Weight);
+head(T2, 2);
+
+% concatenating two tables
+T = [T1, T2];
+head(T, 3);
+
+%adding new field
+T = addvars(T, LastName, 'after', 'PPName');
+head(T, 2);
+
+%removing a field
+T = removevars(T, 'Smoker');
+T = removevars(T, 'Age');
+head(T,2);
+
+%adding new field using dot
+T.Age = Age;
+head(T, 3);
+
+%converting rows to vars
+T3 = rows2vars(T, 'VariableNamesSource', "PPName");
+T3(:, 1:3)
+
+%reordering the columns by specifying index in the desired order
+T = T(:, [1:2 4 3]);
+head(T, 2);
