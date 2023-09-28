@@ -1,0 +1,57 @@
+S1    PPName    Age
+    __    ______    ___
+
+    1     "Anir"    38 
+    2     "Himu"    37 
+
+    Smoker    Height    Weight
+    ______    ______    ______
+
+    false       71        76  
+    true        69        63  
+
+    S1    PPName     Age    Smoker    Height    Weight
+    __    _______    ___    ______    ______    ______
+
+    1     "Anir"     38     false       71        76  
+    2     "Himu"     37     true        69        63  
+    3     "Bappa"    34     true        64        88  
+
+    S1    PPName    LastName    Age    Smoker    Height    Weight
+    __    ______    ________    ___    ______    ______    ______
+
+    1     "Anir"      "G"       38     false       71        76  
+    2     "Himu"      "M"       37     true        69        63  
+
+    S1    PPName    LastName    Height    Weight
+    __    ______    ________    ______    ______
+
+    1     "Anir"      "G"         71        76  
+    2     "Himu"      "M"         69        63  
+
+    S1    PPName     LastName    Height    Weight    Age
+    __    _______    ________    ______    ______    ___
+
+    1     "Anir"       "G"         71        76      38 
+    2     "Himu"       "M"         69        63      37 
+    3     "Bappa"      "B"         64        88      34 
+
+
+ans =
+
+  5×3 table
+
+    OriginalVariableNames    Anir    Himu
+    _____________________    ____    ____
+
+        {'S1'      }         "1"     "2" 
+        {'LastName'}         "G"     "M" 
+        {'Height'  }         "71"    "69"
+        {'Weight'  }         "76"    "63"
+        {'Age'     }         "38"    "37"
+
+    S1    PPName    Height    LastName
+    __    ______    ______    ________
+
+    1     "Anir"      71        "G"   
+    2     "Himu"      69        "M"   
